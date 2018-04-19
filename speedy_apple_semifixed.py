@@ -22,7 +22,18 @@ apple_group.add(my_apple)
 game_ended = False
 while not game_ended:
     for event in pygame.event.get():
-        pass
+        if event.type == pygame.QUIT:
+            game_ended = True
+
+    pressed = pygame.key.get_pressed()
+    if pressed[pygame.K_w]:
+        my_apple.rect.y -= 5
+    if pressed[pygame.K_s]:
+        my_apple.rect.y += 5
+    if pressed[pygame.K_a]:
+        my_apple.rect.x -= 5
+    if pressed[pygame.K_d]:
+        my_apple.rect.x += 5
 
     window_surface.fill((0, 0, 0))
     apple_group.draw(window_surface)

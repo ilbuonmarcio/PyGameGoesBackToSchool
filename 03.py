@@ -2,8 +2,7 @@ import pygame
 
 pygame.init()
 
-window = pygame.display
-window_surface = window.set_mode((128, 128))
+window_surface = pygame.display.set_mode((128, 128))
 
 while True:
 
@@ -26,6 +25,6 @@ while True:
         2 # spessore perimetro
     )
 
-    window.update()
+    pygame.display.update()
 
 pygame.quit()

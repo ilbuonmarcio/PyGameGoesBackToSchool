@@ -2,8 +2,7 @@ import pygame
 
 pygame.init()
 
-window = pygame.display
-window_surface = window.set_mode((128, 128))
+window_surface = pygame.display.set_mode((128, 128))
 
 lower_surface = pygame.Surface((128, 128))
 lower_surface.fill((0, 255, 0))
@@ -20,6 +19,6 @@ while True:
     window_surface.blit(lower_surface, (0, 0))
     window_surface.blit(upper_surface, (64, 64))
 
-    window.update()
+    pygame.display.update()
 
 pygame.quit()

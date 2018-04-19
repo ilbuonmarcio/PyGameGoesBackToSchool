@@ -2,7 +2,6 @@ import pygame
 
 pygame.init()
 
-window = pygame.display
 window_surface = pygame.display.set_mode((400, 400))
 
 class Apple(pygame.sprite.Sprite):
@@ -42,7 +41,7 @@ while not game_ended:
     window_surface.fill((0, 0, 0))
     apple_group.draw(window_surface)
 
-    window.update()
+    pygame.display.update()
     clock.tick(FPS)
 
 pygame.quit()
